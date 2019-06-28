@@ -19,7 +19,7 @@ def reduce(source_array, starting_point=0)
 if starting_point
   returnValue = source_array.inject(yield(starting_point))
 else
-  returnValue = source_array.inject(yield)
+  returnValue = yield(source_array.inject)
 end
 return returnValue
 
