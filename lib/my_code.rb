@@ -12,15 +12,12 @@ newArray = [];
 return newArray
 end
 
-def reduce_to_any_true(source_array)
-  i = 0;
-  returnValue = false
+def reduce(source_array, starting_point=0)
+  i = 0
 
   while i < source_array.length do
-    if (!!source_array[i] == true)
-      returnValue = true
-    end
-      i += 1
+    starting_point = yield(starting_point, source_array[i])
+    i += 1
   end
-  return returnValue
+  return starting_point
 end
