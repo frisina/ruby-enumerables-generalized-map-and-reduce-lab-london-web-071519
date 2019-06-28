@@ -24,6 +24,4 @@ def reduce(source_array, starting_point=0)
   else return starting_point
   end
   
-  return starting_point
-
 end
