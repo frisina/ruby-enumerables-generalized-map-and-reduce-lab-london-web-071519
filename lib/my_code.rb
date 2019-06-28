@@ -12,17 +12,17 @@ newArray = [];
 return newArray
 end
 
-def reduce(source_array, starting_point=0)
+def reduce(source_array, starting_point=nil)
   i = 0
+
+  if starting_point
+    return true
+  else return starting_point
+  end
 
   while i < source_array.length do
     starting_point = yield(starting_point, source_array[i])
     i += 1
   end
 
-  if starting_point = 0
-    return true
-  else return starting_point
-  end
-  
 end
